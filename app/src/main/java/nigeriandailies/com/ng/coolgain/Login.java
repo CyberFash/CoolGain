@@ -16,10 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.EmailAuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
-    EditText  mEmail, mPassword;
+    EditText mEmail, mPassword;
     Button mLoginBtn;
     TextView mCreateBtn;
     ProgressBar progressBar;
@@ -42,28 +43,27 @@ public class Login extends AppCompatActivity {
         mLoginBtn.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View view) {
-
                 String email = mEmail.getText ().toString ().trim ();
                 String password = mPassword.getText ().toString ().trim ();
 
-                if (TextUtils.isEmpty (email)){
+                if (TextUtils.isEmpty (email)) {
                     mEmail.setError ("Email is Required");
                     return;
                 }
 
-                if (TextUtils.isEmpty (password)){
+                if (TextUtils.isEmpty (password)) {
                     mPassword.setError ("Password is Required");
                     return;
                 }
 
-                if (password.length () < 6){
+                if (password.length () < 6) {
                     mPassword.setError ("password must be 6 or more characters");
                     return;
                 }
 
                 progressBar.setVisibility (View.VISIBLE);
-                /* Authenticate the user! */
 
+                /* Authenticate the user! */
                 fAuth.signInWithEmailAndPassword (email, password).addOnCompleteListener (new OnCompleteListener<AuthResult> () {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -88,5 +88,6 @@ public class Login extends AppCompatActivity {
             }
         });
 
+
+        }
     }
-}

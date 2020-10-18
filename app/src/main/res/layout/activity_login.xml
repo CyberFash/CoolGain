@@ -8,9 +8,9 @@
     tools:context=".Login">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/Email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="76dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
@@ -22,39 +22,40 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/Email"
+        app:layout_constraintStart_toStartOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <Button
+        android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-
-    <Button
-        android:id="@+id/loginBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:background="@drawable/button_background"
         android:text="Login"
         android:textColor="?android:attr/colorMultiSelectHighlight"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintStart_toStartOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <TextView
         android:id="@+id/createText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif"
         android:text="New Here? Create Account"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/loginBtn"
@@ -62,21 +63,20 @@
         app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
     <ProgressBar
-        android:id="@+id/progressBar2"
+        android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="8dp"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/registerBtn"
-        app:layout_constraintStart_toStartOf="@+id/registerBtn"
-        app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
+        app:layout_constraintEnd_toEndOf="@+id/createText"
+        app:layout_constraintStart_toStartOf="@+id/createText"
+        app:layout_constraintTop_toBottomOf="@+id/createText" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="253dp"
         android:layout_height="207dp"
-        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
