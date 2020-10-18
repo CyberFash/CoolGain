@@ -19,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity {
-    EditText mFullName, mEmail, mPassword,mPhone;
+    EditText mFullName, mEmail, mPassword;
     Button mRegisterBtn;
     TextView mLoginBtn;
     FirebaseAuth fAuth;
@@ -34,7 +34,7 @@ public class Register extends AppCompatActivity {
         mFullName = findViewById (R.id.FullName);
         mEmail = findViewById (R.id.Email);
         mPassword = findViewById (R.id.Password);
-        mPhone = findViewById (R.id.phone);
+        
         mRegisterBtn = findViewById (R.id.registerBtn);
         mLoginBtn = findViewById (R.id.createText);
 
