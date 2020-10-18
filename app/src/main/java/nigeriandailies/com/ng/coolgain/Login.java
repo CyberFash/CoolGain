@@ -57,7 +57,7 @@ public class Login extends AppCompatActivity {
                 }
 
                 if (password.length () < 6) {
-                    mPassword.setError ("password must be 6 or more characters");
+                    mPassword.setError ("Invalid password");
                     return;
                 }
 
