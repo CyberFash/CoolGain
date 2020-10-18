@@ -19,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity {
-    EditText mFullName, mEmail, mPassword;
+    EditText mFullName, mEmail, mPassword,  mConfirmPassword;
     Button mRegisterBtn;
     TextView mLoginBtn;
     FirebaseAuth fAuth;
@@ -31,12 +31,14 @@ public class Register extends AppCompatActivity {
         setContentView (R.layout.activity_register);
         getSupportActionBar ().hide ();
 
-        mFullName = findViewById (R.id.FullName);
-        mEmail = findViewById (R.id.Email);
-        mPassword = findViewById (R.id.Password);
+        mFullName = findViewById (R.id.user_name);
+        mEmail = findViewById (R.id.email);
+        mPassword = findViewById (R.id.pass);
+        mConfirmPassword = findViewById (R.id.cpass);
+
         
         mRegisterBtn = findViewById (R.id.registerBtn);
-        mLoginBtn = findViewById (R.id.createText);
+        mLoginBtn = findViewById (R.id.log);
 
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById (R.id.progressBar);
